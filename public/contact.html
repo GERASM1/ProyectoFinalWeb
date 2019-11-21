@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Contacto</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="css/mdb.min.css" rel="stylesheet">
+  <!-- Your custom styles (optional) -->
+  <link href="css/contact_style.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Start your project here-->
+  <header>
+      <nav class="navbar fixed-top navbar-expand-lg navbar-dark green scrolling-navbar">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                            <a class="nav-link waves-effect waves-light" href="./evaluations.html">Evaluaciones</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link waves-effect waves-light" href="./events.html">Eventos</a>
+                        </li>
+                      <li class="nav-item">
+                          <a class="nav-link waves-effect waves-light" href="./tournaments.html">Convocatorias</a>
+                      </li>
+                      <li class="nav-item">
+                            <a class="nav-link waves-effect waves-light" href="./learningMaterial.html">Material</a>
+                        </li>
+                      <li class="nav-item">
+                          <a class="nav-link waves-effect waves-light" href="./contact.html">Contacto</a>
+                      </li>
+              </ul>
+              <ul class="navbar-nav nav-flex-icons">
+                  <li class="nav-item">
+                      <a class="nav-link waves-effect waves-light" href="./login.html">Salir</a>
+                  </li>
+              </ul>
+          </div>
+      </nav>
+  </header>
+  <main>
+        <div class="container py-5 my-5"> 
+                <section class="p-md-5 mx-md-5 text-center text-lg-left grey z-depth-1"
+                  style="background-image: url(https://cdn.pixabay.com/photo/2018/01/18/20/42/pencil-3091204_1280.jpg);">
+                  <div class="row d-flex justify-content-center">
+                    <div class="col-md-10">
+                      <div class="card">
+                        <div class="card-body m-3">
+                          <div class="row">
+                            <div class="col-lg-4 d-flex mb-2 align-items-center">
+                              <div class="avatar mx-4 w-100 white d-flex justify-content-center align-items-center">
+                                <img src="./assets/schoolLogo.png" class="rounded-circle img-fluid z-depth-1" alt="woman avatar">
+                              </div>
+                            </div>
+                            <div id="infoText" class="col-lg-8">
+                                <p class="font-weight-bold lead mb-2"><strong>Escuela Primaria "Jesús Morelos Garza"</strong></p>
+                                <p></p>
+                                <p class="font-weight-bold text-muted mb-0">Teléfono: (811) 123 4567</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              </div>
+              <div class="buttonContainer">
+                    <button id="myBtn" type="button" class="btn btn-primary" data-toggle="modal" data-target="#basicExampleModal">Editar</button>
+              </div>
+              <div class="modal fade" id="basicExampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Editar contacto</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+          <form class="text-center" action="#!">
+              <div class="md-form">
+                      <input type="text" id="inputNombre" class="form-control" autofocus>
+                      <label for="inputNombre">Nombre</label>
+                    </div>
+                        <div class="md-form">
+                              <input type="text" id="inputTel" class="form-control" autofocus>
+                              <label for="inputTel">Teléfono</label>
+                            </div>                        
+          </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+        <button type="button" id="addButton" class="btn btn-primary" data-dismiss="modal">Agregar</button>
+      </div>
+    </div>
+  </div>
+</div>
+                         
+  </main>      
+    
+  
+ 
+  <!-- Start your project here-->
+
+  <!-- JQuery -->
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <!-- SCRIPTS -->
+  <script src="./js/globalVariables.js"></script>
+  <script type="text/javascript" src="js/contact_script.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+</body>
+
+</html>
