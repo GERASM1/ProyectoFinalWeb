@@ -67,10 +67,12 @@ $("#newPostButton").click(function(){
   let description = $("#inputDescripcion").val();
   let img = $("#inputImg").val();
   let dateRaw = new Date($('#dateInput').val());
-  let day = dateRaw.getDate();
-  let month = dateRaw.getMonth();
-  let year = dateRaw.getFullYear();
-  let date = year + '-' + month + '-' + day;
+  if (dateRaw){
+    let day = dateRaw.getDate();
+    let month = dateRaw.getMonth();
+    let year = dateRaw.getFullYear();
+    let date = day + '/' + month + '/' + year;
+  }
   let obj = {
     title : title,
     description : description,
@@ -124,8 +126,8 @@ $("#list").on('click', ".buttonEdit", function(event){
   event.preventDefault();
   let idU = $(this).data("id");
   currentEditID = $(this).data("id");
+  console.log(currentEditID);
   currentTitle = $(this).data("title");
-  console.log(currentTitle);
   currentDescription = $(this).data("description");
   currentImg = $(this).data("img");
   currentDate = $(this).data("date");
@@ -144,10 +146,13 @@ $("#editPostButton").click(function(){
   let description = $("#inputDescripcionE").val();
   let img = $("#inputImgE").val();
   let dateRaw = new Date($('#dateInputE').val());
-  let day = dateRaw.getDate() + 1;
-  let month = dateRaw.getMonth() + 1;
-  let year = dateRaw.getFullYear();
-  let date = day + '/' + month + '/' + year;
+  let date;
+  if (dateRaw){
+    let day = dateRaw.getDate();
+    let month = dateRaw.getMonth();
+    let year = dateRaw.getFullYear();
+    date = day + '/' + month + '/' + year;
+  }
   let body = $.extend({}, {
       id: currentEditID,
       title: title != "" ? title : undefined,

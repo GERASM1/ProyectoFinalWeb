@@ -111,10 +111,13 @@ $("#searchButton").click(function(){
     let img = $("#inputImg").val();
     let link = $("#inputLink").val();
     let dateRaw = new Date($('#dateInput').val());
-    let day = dateRaw.getDate() + 1;
-    let month = dateRaw.getMonth() + 1;
+    if (dateRaw){
+    let day = dateRaw.getDate();
+    let month = dateRaw.getMonth();
     let year = dateRaw.getFullYear();
     let date = day + '/' + month + '/' + year;
+    }
+    
     let obj = {
       title : title,
       description : description,
