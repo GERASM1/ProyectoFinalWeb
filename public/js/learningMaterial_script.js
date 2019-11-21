@@ -93,7 +93,10 @@ $("#newPostButton").click(function(){
     let title = $("#inputTitulo").val();
     let description = $("#inputDescripcion").val();
     let tipo = asig;
-
+    if(asig == ""){
+        alert("No selecciono una Asignatura");
+        return;
+    }
     let obj = {
         title : title,
         name: userName,
@@ -108,7 +111,10 @@ $("#newPostButton").click(function(){
         method: "POST",
         contentType: "application/json",
         success: function(){
-        loadPosts();
+        if(currentType == "")
+          loadPosts();
+        else
+          loadPostsByType();
         cleanInputs();
         $("#dropdownTitle").html("Asignatura");
         },
