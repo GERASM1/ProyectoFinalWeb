@@ -108,7 +108,7 @@ app.put("/eventos/:id", jsonParser, (req, res) => {
 	let bodyID = req.body.id;
     let paramsID = req.params.id;
 
-    if (!bodyId) {
+    if (!bodyID) {
         res.statusMessage = "no se paso el ID";
         return res.status(406).json({message: res.statusMessage, status: 406});
     }
@@ -155,7 +155,6 @@ app.get("/convocatorias", (req, res, next) => {
 //despliega convocatorias por nombre
 app.post("/convocatorias/name", jsonParser, (req, res) => {
 	let searchStr = req.body.searchString;
-    console.log(`${searchStr}`);
 	if(!searchStr){
 		res.statusMessage = "uno de los campos esta vacio";
 		return res.status(406).json({
